@@ -18,14 +18,18 @@ build:
 
 requirements:
   host:
+    - python >=3.5
     - pip
-    - python
-    - setuptools
-    - astropy
   run:
-    - python
-    - astropy
-    - matplotlib
+    - python >=3.5
+    - numpy
+    - astropy >=3.1
+    - matplotlib >=2.0
+    - reproject >=0.4
+    - pyregion >=2.0
+    - pillow >=4.0
+    - pyavm >=0.9.4
+    - scikit-image >=0.14
 
 test:
   imports:
