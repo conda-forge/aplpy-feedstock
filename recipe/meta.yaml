@@ -1,7 +1,7 @@
 {% set name = "aplpy" %}
-{% set version = "2.0" %}
+{% set version = "2.0.1" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "618ff478ec5bc4cbc05dc04f2ea9f7f1781b8d7ac467fd4b115c99d72db4cc7a" %}
+{% set hash_value = "adfd789280b94d6a63d205972c632020f72adf9fb6e2bd0772e80f349059d9ef" %}
 
 package:
   name: '{{ name|lower }}'
@@ -30,6 +30,7 @@ requirements:
     - pillow >=4.0
     - pyavm >=0.9.4
     - scikit-image >=0.14
+    - shapely >=1.6
 
 test:
   imports:
