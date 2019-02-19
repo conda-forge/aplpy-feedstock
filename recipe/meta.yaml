@@ -1,7 +1,7 @@
 {% set name = "aplpy" %}
-{% set version = "2.0.2" %}
+{% set version = "2.0.3" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "4f8f5febee3ad2cf21367a9a2e685906c5ee121e3441fced172b4693ad0c4d79" %}
+{% set hash_value = "239f3d83635ca4251536aeb577df7c60df77fc4d658097b92094719739aec3f3" %}
 
 package:
   name: '{{ name|lower }}'
