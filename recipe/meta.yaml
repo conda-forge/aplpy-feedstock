@@ -1,19 +1,17 @@
 {% set name = "aplpy" %}
-{% set version = "2.0.3" %}
-{% set hash_type = "sha256" %}
-{% set hash_value = "239f3d83635ca4251536aeb577df7c60df77fc4d658097b92094719739aec3f3" %}
+{% set version = "2.1.0" %}
 
 package:
-  name: '{{ name|lower }}'
-  version: '{{ version }}'
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/APLpy-{{ version }}.tar.gz
-  '{{ hash_type }}': '{{ hash_value }}'
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 282766070416b7b21f1ec8eaee95a56d22121297d0643cadf924124c3694095e
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: python setup.py install --offline --no-git --single-version-externally-managed --record record.txt
 
 requirements:
