@@ -18,6 +18,7 @@ requirements:
   host:
     - python >=3.6
     - setuptools_scm
+    - wheel
   run:
     - python >=3.6
     - numpy
