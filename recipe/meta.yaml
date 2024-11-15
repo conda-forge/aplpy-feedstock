@@ -1,5 +1,5 @@
 {% set name = "aplpy" %}
-{% set version = "2.1.0" %}
+{% set version = "2.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 282766070416b7b21f1ec8eaee95a56d22121297d0643cadf924124c3694095e
+  sha256: a14ca550ceffe8ec84245ae992bf4c8d78a55c2fd921d050e5abb872fc99880d
 
 build:
   noarch: python
