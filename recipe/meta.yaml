@@ -1,3 +1,4 @@
+{% set python_min = '3.10' %}
 {% set name = "aplpy" %}
 {% set version = "2.2.0" %}
 
@@ -6,22 +7,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: a14ca550ceffe8ec84245ae992bf4c8d78a55c2fd921d050e5abb872fc99880d
 
 build:
   noarch: python
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python >=3.10
+    - python {{ python_min }}
     - setuptools_scm
     - pip
     - wheel
   run:
-    - python >=3.10
+    - python >={{ python_min }}
     - numpy >=1.22
     - astropy-base >=5.0
     - matplotlib-base >=3.5
@@ -33,6 +34,8 @@ requirements:
     - shapely >=2.0
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - aplpy
 
