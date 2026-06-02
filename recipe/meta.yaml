@@ -1,4 +1,4 @@
-{% set python_min = "3.10" %}
+{% set python_min = "3.11" %}
 {% set name = "aplpy" %}
 {% set version = "2.2.1" %}
 
@@ -23,12 +23,12 @@ requirements:
     - wheel
   run:
     - python >={{ python_min }}
-    - numpy >=1.22
-    - astropy-base >=5.0
-    - matplotlib-base >=3.5
+    - numpy >=1.23
+    - astropy-base >=7.0
+    - matplotlib-base >=3.8
     - reproject >=0.9
     - pyregion >=2.2
-    - pillow >=9.0
+    - pillow >=9.2
     - pyavm >=0.9.6
     - scikit-image >=0.20
     - shapely >=2.0
