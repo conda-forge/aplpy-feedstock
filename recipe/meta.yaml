@@ -1,6 +1,6 @@
-{% set python_min = '3.10' %}
+{% set python_min = "3.11" %}
 {% set name = "aplpy" %}
-{% set version = "2.2.0" %}
+{% set version = "2.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,11 +8,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a14ca550ceffe8ec84245ae992bf4c8d78a55c2fd921d050e5abb872fc99880d
+  sha256: 3fb3d5b9e68c617815c175be7a66b6a1f3fd42206d68dfe041766ad322052610
 
 build:
   noarch: python
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -23,12 +23,12 @@ requirements:
     - wheel
   run:
     - python >={{ python_min }}
-    - numpy >=1.22
-    - astropy-base >=5.0
-    - matplotlib-base >=3.5
+    - numpy >=1.23
+    - astropy-base >=7.0
+    - matplotlib-base >=3.8
     - reproject >=0.9
     - pyregion >=2.2
-    - pillow >=9.0
+    - pillow >=9.2
     - pyavm >=0.9.6
     - scikit-image >=0.20
     - shapely >=2.0
